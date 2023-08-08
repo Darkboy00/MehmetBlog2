@@ -1,0 +1,164 @@
+body
+{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    animation-name: cardAnimation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+.card
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    text-align: center;
+    margin: 40px;
+    background-color: white;
+    margin-left: 55px;
+}
+a
+{
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+.card:hover
+{
+    animation-name: card, shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes card
+{
+    0%{background-color:rgb(255, 230, 0)}
+}
+@keyframes gradient
+{
+    0%
+    {
+        background-position: 0% 50%;
+    }
+    50%
+    {
+        background-position: 100% 50%;
+    }
+    100%
+    {
+        background-position: 0% 50%;
+    }
+}
+p
+{
+    font-family: "Audiowide", sans-serif;
+}
+h1
+{
+    font-family: "Audiowide", sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 3px steelblue;
+}
+h4
+{
+    font-family: "Audiowide", sans-serif;
+}
+h6
+{
+    font-family: "Audiowide", sans-serif;
+}
+.cursor
+{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: yellow;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+@keyframes wave
+{
+    2%
+    {
+        transform: translateX(1);
+    }
+    25%
+    {
+        transform: translateX(-25%);
+    }
+    50%
+    {
+        transform: translateX(-50%);
+    }
+    75%
+    {
+        transform: translateX(-25%);
+    }
+    100%
+    {
+        transform: translateX(1);
+    }
+}
+.wave
+{
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.wave:nth-of-type(2)
+{
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.7;
+}
+.wave:nth-of-type(3)
+{
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.8;
+}
+.wave:nth-of-type(4)
+{
+    bottom: -3.75em;
+    animation: wave 22s -2s reverse infinite;
+    opacity: 0.9;
+}
+@keyframes cardAnimation
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 0.5;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+@keyframes shake
+{
+    0% { transform: translate(0.5px, 0.5px) rotate(0deg); }
+    10% { transform: translate(-0.5px, -1px) rotate(-0.1deg); }
+    20% { transform: translate(-1.5px, 0px) rotate(0.1deg); }
+    30% { transform: translate(1.5px, 1px) rotate(0deg); }
+    40% { transform: translate(0.5px, -0.5px) rotate(0.1deg); }
+    50% { transform: translate(-0.5px, 1px) rotate(-0.1deg); }
+    60% { transform: translate(-1.5px, 0.5px) rotate(0deg); }
+    70% { transform: translate(1.5px, 0.5px) rotate(-0.1deg); }
+    80% { transform: translate(-0.5px, -0.5px) rotate(0.1deg); }
+    90% { transform: translate(0.5px, 1px) rotate(0deg); }
+    100% { transform: translate(0.5px, -1px) rotate(-0.1deg); }
+}
